@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Ginnoji Board</title>
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+
+    <div class="main-page">
+        <div class="info-block">
+            <div class="info-block-container">
+                <div class="project">
+                    <!--  -->
+                    <a href="">Проекты</a> /
+                    <a href="">Ginnoji</a>
+                </div>
+                <div class="sprint-info">
+                    <div class="sprint-container">
+                        <div class="sprint-name">
+                            <!--  -->
+                            <h1>название</h1>
+                        </div>
+                        <div class="sprint-description">
+                            <!--  -->
+                            <p>Цели : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, dolor
+                                laboriosam porro hic assumenda corporis? Recusandae corrupti reprehenderit voluptatum,
+                                culpa similique totam, animi impedit adipisci ab aliquid et possimus voluptate.</p>
+                        </div>
+                    </div>
+                    <div class="sprint-func">
+                        <div class="func-data"></div>
+                        <div class="func-button">
+                            <button id="end-sprint-btn">Завершить спринт</button>
+                            <button id="update-sprint-btn">Редактировать спринт</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-panel">
+                    <div class="filter-panel-container">
+                        <div class="container-search">
+                            <div class="search">
+                                <input type="text" class="search form-control" placeholder="Search...">
+                            </div>
+                        </div>
+                        <div class="container-users">
+                            <div class="select-dropdown">
+                                <select>
+                                    <option value="Option 1">users</option>
+                                    <option value="Option 2"></option>
+                                    <option value="Option 3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="container-things">
+                            <div class="things-user-story">
+                                <div class="select-dropdown">
+                                    <select>
+                                        <option value="Option 1">user story</option>
+                                        <option value="Option 2"></option>
+                                        <option value="Option 3"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="things-mark">
+                                <div class="select-dropdown">
+                                    <select>
+                                        <option value="Option 1">mark</option>
+                                        <option value="Option 2"></option>
+                                        <option value="Option 3"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="things-type">
+                                <div class="select-dropdown">
+                                    <select>
+                                        <option value="Option 1">type</option>
+                                        <option value="Option 2"></option>
+                                        <option value="Option 3"></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-panel-analitycs">
+                        <div class="analitycs-button">
+                            <button id="analysbtn">Analitycs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="board-block">
+            <div class="board">
+                <div class="section">
+                    <div class="section-container">
+                        <div class="section-container-text">
+                            task
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="modal-content-container">
+                                        <div class="first-section">
+                                            <div class="branch">
+                                                <!-- ветка             -->
+                                            / 
+                                            <a href="">branch</a>
+                                            </div>
+                                            <div class="task-name">
+                                                <h2>Task Name</h2>
+                                            </div>
+                                            <div class="description">
+                                                <!-- описание -->
+                                                <p  class="headlines">Description</p>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore culpa pariatur voluptates, cupiditate temporibus sequi fugiat id quae eius quaerat, doloribus inventore assumenda hic veritatis deleniti doloremque suscipit consequatur voluptatem!</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="second-section">
+                                            <div class="second-section-buttons">
+                                                <!-- | редактировать задачу -->
+                                                <button>Редактировать</button>
+                                            </div>
+                                            <div class="second-section-info">
+                                                <!-- ------
+                                                dropdown: status
+                                                сведения---
+                                                приоритет
+                                                автор
+                                                исполнитель
+                                                спринт
+                                                стори поинт
+                                                срок исполнения -->
+                                                <div class="select-dropdown">
+                                                    <select>
+                                                        <option value="Option 1">status / in work</option>
+                                                        <option value="Option 2"></option>
+                                                        <option value="Option 3"></option>
+                                                    </select>
+                                                </div>
+                                                <p class="headlines">Сведения</p>
+                                                <div class="infoooo">
+                                                    <div class="info-1">
+                                                        <p>Автор: </p>
+                                                        <p>Исполнитель: </p>
+                                                        <p>Приоритет:</p>
+                                                        <p>Проект: </p>
+                                                        <p>Метки: </p>
+                                                        <p>User Story:</p>
+                                                        <p>Story Points: </p>
+                                                        <p>Branch: </p>
+                                                    </div>
+                                                    <div class="info-2">
+                                                        <p class="priority">авторный</p>
+                                                        <p class="priority">исполнительный</p>
+                                                        <p class="priority">приоритетный</p>
+                                                        <p class="priority">проектный</p>
+                                                        <p class="priority">меточные</p>
+                                                        <p class="priority">какойнибудь</p>
+                                                        <p class="priority">1</p>
+                                                        <p class="priority">123</p>
+                                                    </div>
+                                                </div>
+                                                <div class="datetime">
+                                                    <p>Время создания: </p>
+                                                    <p class="date">20:19</p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-container">
+                        <div class="section-container-text">
+                            task
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                            <!-- <div class="task">
+                                <details>
+                                  <summary>
+                                    <div class="button">
+                                      Show me the modal
+                                    </div>
+                                    <div class="details-modal-overlay"></div>
+                                  </summary>
+                                  <div class="details-modal">
+                                    <div class="details-modal-close">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z" fill="black" />
+                                      </svg>
+                                    </div>
+                                    <div class="details-modal-title">
+                                      <h1>My details modal</h1>
+                                    </div>
+                                    <div class="details-modal-content">
+                                      <p>
+                                        You can click the X in the corner or click the overlay to close this modal.
+                                        Something like this could be useful as a nice way to show additional information,
+                                        but that's about as far as I would take it. It's just a nice way of styling the details element.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </details>
+                              </div> -->
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-container">
+                        <div class="section-container-text">
+                            task
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-container">
+                        <div class="section-container-text">
+                            task
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-container">
+                        <div class="section-container-text">
+                            task
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-container">
+                        <div class="section-container-text">
+                            task
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                        <div class="section-conteiner-tasks">
+                            <div class="task">
+                                name
+                                description
+                                storypoints
+                                author
+                                priority
+                                branch
+                                (mark, userstory,deadline, type)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/Modal.js"></script>
+</body>
+</body>
+
+</html>
+
+<!-- добавить слева доску и бэклог
+в бэклоге выводить текщий спринт и список всех задач
+также должна быть сумма стори поинтов выполненных задач
+неначатых задач
+и задач в процессе
+выводить общее количество стори поинтов 
+и процент законченного спринта
+-->
